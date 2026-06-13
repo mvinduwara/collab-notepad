@@ -1,6 +1,6 @@
-package com.collabpad.dto.document;
+package lk.dev.notepad.dto.document;
 
-import com.collabpad.entity.Document;
+import lk.dev.notepad.entity.Document;
 import lombok.Data;
 
 @Data

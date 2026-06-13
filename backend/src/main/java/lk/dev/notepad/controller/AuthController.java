@@ -1,10 +1,10 @@
-package com.collabpad.controller;
+package lk.dev.notepad.controller;
 
-import com.collabpad.dto.auth.AuthResponse;
-import com.collabpad.dto.auth.LoginRequest;
-import com.collabpad.dto.auth.RegisterRequest;
-import com.collabpad.service.AuthService;
 import jakarta.validation.Valid;
+import lk.dev.notepad.dto.auth.AuthResponse;
+import lk.dev.notepad.dto.auth.LoginRequest;
+import lk.dev.notepad.dto.auth.RegisterRequest;
+import lk.dev.notepad.service.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

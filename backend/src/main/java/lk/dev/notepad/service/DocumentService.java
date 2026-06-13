@@ -1,9 +1,6 @@
 package lk.dev.notepad.service;
 
-import lk.dev.notepad.dto.document.AddCollaboratorRequest;
-import lk.dev.notepad.dto.document.CreateDocumentRequest;
-import lk.dev.notepad.dto.document.DocumentResponse;
-import lk.dev.notepad.dto.document.DocumentSummaryResponse;
+import lk.dev.notepad.dto.document.*;
 import lk.dev.notepad.entity.Document;
 import lk.dev.notepad.entity.DocumentCollaborator;
 import lk.dev.notepad.entity.DocumentVersion;
@@ -59,7 +56,7 @@ public class DocumentService {
     }
 
     @Transactional
-    public DocumentResponse updateDocument(Long id, com.collabpad.dto.document.UpdateDocumentRequest request, User user) {
+    public DocumentResponse updateDocument(Long id, UpdateDocumentRequest request, User user) {
         Document document = findDocumentById(id);
         assertCanEdit(document, user);
 

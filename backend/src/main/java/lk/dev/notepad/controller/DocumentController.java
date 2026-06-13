@@ -1,10 +1,7 @@
 package lk.dev.notepad.controller;
 
 import jakarta.validation.Valid;
-import lk.dev.notepad.dto.document.AddCollaboratorRequest;
-import lk.dev.notepad.dto.document.CreateDocumentRequest;
-import lk.dev.notepad.dto.document.DocumentResponse;
-import lk.dev.notepad.dto.document.DocumentSummaryResponse;
+import lk.dev.notepad.dto.document.*;
 import lk.dev.notepad.dto.version.VersionResponse;
 import lk.dev.notepad.entity.User;
 import lk.dev.notepad.security.AuthHelper;
@@ -47,7 +44,7 @@ public class DocumentController {
     @PutMapping("/{id}")
     public ResponseEntity<DocumentResponse> updateDocument(
             @PathVariable Long id,
-            @RequestBody com.collabpad.dto.document.UpdateDocumentRequest request) {
+            @RequestBody UpdateDocumentRequest request) {
         User user = authHelper.getCurrentUser();
         return ResponseEntity.ok(documentService.updateDocument(id, request, user));
     }
